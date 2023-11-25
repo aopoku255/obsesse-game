@@ -536,7 +536,7 @@ const CrmContacts = () => {
               <Card id="contactList">
                 <CardBody className="pt-0">
                   <div>
-                    {isContactSuccess && crmcontacts.length ? (
+                    {isContactSuccess && crmcontacts?.length ? (
                       <TableContainer
                         columns={columns}
                         data={(crmcontacts || [])}

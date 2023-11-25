@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { getEvents, addNewEvent, updateEvent, deleteEvent, getCategories, getUpCommingEvent ,resetCalendar} from './thunk';
+import { getEvents, addNewEvent, updateEvent, deleteEvent, getCategories, getUpCommingEvent, resetCalendar } from './thunk';
 
 export const initialState = {
   events: [],
@@ -19,14 +19,14 @@ const calendarSlice = createSlice({
       state.events = action.payload;
     });
     builder.addCase(getEvents.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(addNewEvent.fulfilled, (state, action) => {
       state.events.push(action.payload);
     });
     builder.addCase(addNewEvent.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(updateEvent.fulfilled, (state, action) => {
@@ -38,7 +38,7 @@ const calendarSlice = createSlice({
     });
 
     builder.addCase(updateEvent.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(deleteEvent.fulfilled, (state, action) => {
@@ -47,14 +47,14 @@ const calendarSlice = createSlice({
       );
     });
     builder.addCase(deleteEvent.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(getCategories.fulfilled, (state, action) => {
       state.categories = action.payload;
     });
     builder.addCase(getCategories.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(getUpCommingEvent.fulfilled, (state, action) => {
@@ -62,7 +62,7 @@ const calendarSlice = createSlice({
     });
 
     builder.addCase(getUpCommingEvent.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(resetCalendar.fulfilled, (state, action) => {
@@ -75,7 +75,7 @@ const calendarSlice = createSlice({
     });
 
     builder.addCase(resetCalendar.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
   },

@@ -15,13 +15,13 @@ const ProjectsSlice = createSlice({
             state.projectLists = action.payload;
         });
         builder.addCase(getProjectList.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
         });
         builder.addCase(addProjectList.fulfilled, (state, action) => {
             state.projectLists.push(action.payload);
         });
         builder.addCase(addProjectList.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
         });
         builder.addCase(updateProjectList.fulfilled, (state, action) => {
             state.projectLists = state.projectLists.map(project =>
@@ -31,13 +31,13 @@ const ProjectsSlice = createSlice({
             );
         });
         builder.addCase(updateProjectList.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
         });
         builder.addCase(deleteProjectList.fulfilled, (state, action) => {
             state.projectLists = state.projectLists.filter(project => project.id.toString() !== action.payload.id.toString());
         });
         builder.addCase(deleteProjectList.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
         });
     }
 });

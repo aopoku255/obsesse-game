@@ -17,21 +17,21 @@ const DashboardCRMSlice = createSlice({
       state.balanceOverviewData = action.payload;
     });
     builder.addCase(getBalanceChartsData.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(getDialChartsData.fulfilled, (state, action) => {
       state.dialTypeData = action.payload;
     });
     builder.addCase(getDialChartsData.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(getSalesChartsData.fulfilled, (state, action) => {
       state.salesForecastData = action.payload;
     });
     builder.addCase(getSalesChartsData.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
   }

@@ -518,7 +518,7 @@ const CrmLeads = () => {
                 </CardHeader>
                 <CardBody className="pt-0">
                   <div>
-                    {isLeadsSuccess && leads.length ? (
+                    {isLeadsSuccess && leads?.length ? (
                       <TableContainer
                         columns={columns}
                         data={(leads || [])}

@@ -15,13 +15,13 @@ const TodosSlice = createSlice({
       state.todos = action.payload;
     });
     builder.addCase(getTodos.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
     builder.addCase(addNewTodo.fulfilled, (state, action) => {
       state.todos.push(action.payload);
     });
     builder.addCase(addNewTodo.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
     builder.addCase(updateTodo.fulfilled, (state, action) => {
       state.todos = state.todos.map(todo =>
@@ -31,7 +31,7 @@ const TodosSlice = createSlice({
       );
     });
     builder.addCase(updateTodo.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
     builder.addCase(deleteTodo.fulfilled, (state, action) => {
       state.todos = state.todos.filter(
@@ -39,19 +39,19 @@ const TodosSlice = createSlice({
       );
     });
     builder.addCase(deleteTodo.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
     builder.addCase(getProjects.fulfilled, (state, action) => {
       state.projects = action.payload;
     });
     builder.addCase(getProjects.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
     builder.addCase(addNewProject.fulfilled, (state, action) => {
       state.projects.push(action.payload);
     });
     builder.addCase(addNewProject.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
   }
 });

@@ -85,7 +85,7 @@ const EcommerceProducts = (props) => {
       setActiveTab(tab);
       let filteredProducts = products;
       if (type !== "all") {
-        filteredProducts = products.filter((product) => product.status === type);
+        filteredProducts = products?.filter((product) => product?.status === type);
       }
       setProductList(filteredProducts);
     }

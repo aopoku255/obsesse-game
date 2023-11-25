@@ -17,14 +17,14 @@ const DashboardProjectSlice = createSlice({
       state.projectData = action.payload;
     });
     builder.addCase(getProjectChartsData.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(getProjectStatusChartsData.fulfilled, (state, action) => {
       state.projectStatusData = action.payload;
     });
     builder.addCase(getProjectStatusChartsData.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
   }
 });

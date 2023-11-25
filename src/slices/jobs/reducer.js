@@ -15,7 +15,7 @@ const Jobslice = createSlice({
             state.appList = action.payload;
         });
         builder.addCase(getApplicationList.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
         });
     }
 });

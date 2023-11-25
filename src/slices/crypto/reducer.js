@@ -15,14 +15,14 @@ const Cryptoslice = createSlice({
             state.transationList = action.payload;
         });
         builder.addCase(getTransationList.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
         });
 
         builder.addCase(getOrderList.fulfilled, (state, action) => {
             state.orderList = action.payload;
         });
         builder.addCase(getOrderList.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
         });
     }
 });

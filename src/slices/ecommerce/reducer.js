@@ -18,7 +18,7 @@ const EcommerceSlice = createSlice({
     });
 
     builder.addCase(getProducts.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(addNewProduct.fulfilled, (state, action) => {
@@ -26,7 +26,7 @@ const EcommerceSlice = createSlice({
     });
 
     builder.addCase(addNewProduct.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(updateProduct.fulfilled, (state, action) => {
@@ -34,11 +34,11 @@ const EcommerceSlice = createSlice({
         product._id.toString() === action.payload.data._id.toString()
           ? { ...product, ...action.payload.data }
           : product
-      );;
+      );
     });
 
     builder.addCase(updateProduct.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(deleteProducts.fulfilled, (state, action) => {
@@ -46,7 +46,7 @@ const EcommerceSlice = createSlice({
     });
 
     builder.addCase(deleteProducts.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(getOrders.fulfilled, (state, action) => {
@@ -56,9 +56,9 @@ const EcommerceSlice = createSlice({
     });
 
     builder.addCase(getOrders.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isOrderCreated = false;
-      state.isOrderSuccess = false;  
+      state.isOrderSuccess = false;
     });
 
     builder.addCase(addNewOrder.fulfilled, (state, action) => {
@@ -67,7 +67,7 @@ const EcommerceSlice = createSlice({
     });
 
     builder.addCase(addNewOrder.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(updateOrder.fulfilled, (state, action) => {
@@ -79,7 +79,7 @@ const EcommerceSlice = createSlice({
     });
 
     builder.addCase(updateOrder.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(deleteOrder.fulfilled, (state, action) => {
@@ -89,7 +89,7 @@ const EcommerceSlice = createSlice({
     });
 
     builder.addCase(deleteOrder.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(getSellers.fulfilled, (state, action) => {
@@ -97,7 +97,7 @@ const EcommerceSlice = createSlice({
     });
 
     builder.addCase(getSellers.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(getCustomers.fulfilled, (state, action) => {
@@ -107,7 +107,7 @@ const EcommerceSlice = createSlice({
     });
 
     builder.addCase(getCustomers.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isCustomerCreated = false;
       state.isCustomerSuccess = false;
     });
@@ -117,7 +117,7 @@ const EcommerceSlice = createSlice({
       state.isCustomerCreated = true;
     });
     builder.addCase(addNewCustomer.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(updateCustomer.fulfilled, (state, action) => {
@@ -128,7 +128,7 @@ const EcommerceSlice = createSlice({
       );
     });
     builder.addCase(updateCustomer.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(deleteCustomer.fulfilled, (state, action) => {
@@ -137,7 +137,7 @@ const EcommerceSlice = createSlice({
       );
     });
     builder.addCase(deleteCustomer.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
   }
 });

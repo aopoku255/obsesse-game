@@ -414,7 +414,7 @@ const EcommerceCustomers = () => {
                 </CardHeader>
                 <div className="card-body pt-0">
                   <div>
-                    {isCustomerSuccess && customers.length ? (
+                    {isCustomerSuccess && customers?.length ? (
                       <TableContainer
                         columns={columns}
                         data={(customers || [])}

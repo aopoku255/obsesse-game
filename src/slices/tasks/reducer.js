@@ -15,7 +15,7 @@ const TasksSlice = createSlice({
             state.isTaskSuccess = true;
         });
         builder.addCase(getTaskList.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
             state.isTaskCreated = false;
             state.isTaskSuccess = true;
         });
@@ -26,7 +26,7 @@ const TasksSlice = createSlice({
             state.isTaskAddFail = false;
         });
         builder.addCase(addNewTask.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
             state.isTaskAdd = false;
             state.isTaskAddFail = true;
         });
@@ -40,7 +40,7 @@ const TasksSlice = createSlice({
             state.isTaskUpdateFail = false;
         });
         builder.addCase(updateTask.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
             state.isTaskUpdate = false;
             state.isTaskUpdateFail = true;
         });
@@ -50,7 +50,7 @@ const TasksSlice = createSlice({
             state.isTaskDeleteFail = false;
         });
         builder.addCase(deleteTask.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
             state.isTaskDelete = false;
             state.isTaskDeleteFail = true;
         });

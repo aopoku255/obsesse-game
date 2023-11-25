@@ -12,7 +12,7 @@ const ProfileDropdown = () => {
     const profiledropdownData = createSelector(
         (state) => state.Profile.user,
         (user) => user
-      );
+    );
     // Inside your component
     const user = useSelector(profiledropdownData);
 
@@ -20,6 +20,7 @@ const ProfileDropdown = () => {
 
     useEffect(() => {
         const obj = JSON.parse(sessionStorage.getItem("authUser"));
+        // console.log(obj)
         if (sessionStorage.getItem("authUser")) {
             setUserName(process.env.REACT_APP_DEFAULTAUTH === "fake" ? obj.username === undefined ? user.first_name ? user.first_name : obj.data.first_name : "Admin" || "Admin" :
                 process.env.REACT_APP_DEFAULTAUTH === "firebase" ? obj.email && obj.email : "Admin"

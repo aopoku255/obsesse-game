@@ -15,7 +15,7 @@ const APIKeyslice = createSlice({
             state.apiKey = action.payload;
         });
         builder.addCase(getAPIKey.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
         });
     }
 });

@@ -417,7 +417,7 @@ const AllTasks = () => {
               </div>
             </div>
             <div className="card-body pt-0">
-              {isTaskSuccess && taskList.length ? (
+              {isTaskSuccess && taskList?.length ? (
                 <TableContainer
                   columns={columns}
                   data={(TaskList || [])}

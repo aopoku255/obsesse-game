@@ -475,7 +475,7 @@ const CrmCompanies = () => {
 
                 <CardBody className="pt-0">
                   <div>
-                    {isCompaniesSuccess && companies.length ? (
+                    {isCompaniesSuccess && companies?.length ? (
                       <TableContainer
                         columns={columns}
                         data={(companies || [])}

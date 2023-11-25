@@ -15,7 +15,7 @@ const DashboardNFTSlice = createSlice({
     });
 
     builder.addCase(getMarketChartsDatas.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
   }
 });

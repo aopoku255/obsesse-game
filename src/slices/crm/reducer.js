@@ -21,7 +21,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(getContacts.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isContactCreated = false;
       state.isContactSuccess = false;
     });
@@ -34,7 +34,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(addNewContact.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isContactAdd = false;
       state.isContactAddFail = true;
     });
@@ -51,7 +51,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(updateContact.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isContactUpdate = false;
       state.isContactUpdateFail = true;
     });
@@ -63,7 +63,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(deleteContact.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isContactDelete = false;
       state.isContactDeleteFail = true;
     });
@@ -75,7 +75,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(getCompanies.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isCompaniesCreated = false;
       state.isCompaniesSuccess = false;
     });
@@ -87,7 +87,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(addNewCompanies.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isCompaniesCreated = false;
       state.isCompaniesSuccess = false;
     });
@@ -101,7 +101,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(updateCompanies.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isCompaniesUpdate = false;
       state.isCompaniesUpdateFail = true;
     });
@@ -114,7 +114,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(deleteCompanies.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isCompaniesDelete = false;
       state.isCompaniesDeleteFail = true;
     });
@@ -124,7 +124,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(getDeals.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(getLeads.fulfilled, (state, action) => {
@@ -134,7 +134,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(getLeads.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isLeadCreated = false;
       state.isLeadsSuccess = false;
     });
@@ -147,7 +147,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(addNewLead.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isLeadsAdd = false;
       state.isLeadsAddFail = true;
     });
@@ -162,7 +162,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(updateLead.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isLeadsUpdate = false;
       state.isLeadsUpdateFail = true;
     });
@@ -176,7 +176,7 @@ const crmSlice = createSlice({
     });
 
     builder.addCase(deleteLead.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isLeadsDelete = false;
       state.isLeadsDeleteFail = true;
     });

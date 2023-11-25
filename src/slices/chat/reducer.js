@@ -17,35 +17,35 @@ const chatSlice = createSlice({
       state.chats = action.payload;
     });
     builder.addCase(getDirectContact.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(getChannels.fulfilled, (state, action) => {
       state.channels = action.payload;
     });
     builder.addCase(getChannels.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(getMessages.fulfilled, (state, action) => {
       state.messages = action.payload;
     });
     builder.addCase(getMessages.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(addMessage.fulfilled, (state, action) => {
       state.messages.push(action.payload);
     });
     builder.addCase(addMessage.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(deleteMessage.fulfilled, (state, action) => {
       state.messages = (state.messages || []).filter((message) => message.id.toString() !== action.payload.toString());
     });
     builder.addCase(deleteMessage.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
   },

@@ -46,22 +46,24 @@ const UserProfile = () => {
   );
   // Inside your component
   const {
-    user, success, error 
+    user, success, error
   } = useSelector(userprofileData);
+
+  
 
   useEffect(() => {
     if (sessionStorage.getItem("authUser")) {
       const obj = JSON.parse(sessionStorage.getItem("authUser"));
-
+      console.log(obj)
       if (!isEmpty(user)) {
-        obj.data.first_name = user.first_name;
+        obj.data.first_name = user?.first_name;
         sessionStorage.removeItem("authUser");
         sessionStorage.setItem("authUser", JSON.stringify(obj));
       }
 
-      setUserName(obj.data.first_name);
-      setemail(obj.data.email);
-      setidx(obj.data._id || "1");
+      setUserName(obj?.first_name || "Andrews");
+      setemail(obj?.email || "");
+      setidx(obj?.uid || "1");
 
       setTimeout(() => {
         dispatch(resetProfileFlag());
@@ -83,6 +85,7 @@ const UserProfile = () => {
       first_name: Yup.string().required("Please Enter Your UserName"),
     }),
     onSubmit: (values) => {
+      console.log(values)
       dispatch(editProfile(values));
     }
   });

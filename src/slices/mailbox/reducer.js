@@ -4,7 +4,7 @@ import { getMailDetails, deleteMail } from './thunk';
 export const initialState = {
   mailDetails: [],
   error: {},
-  isLoader : false
+  isLoader: false
 };
 
 const MailBoxSlice = createSlice({
@@ -17,7 +17,7 @@ const MailBoxSlice = createSlice({
       state.isLoader = false;
     });
     builder.addCase(getMailDetails.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isLoader = true;
     });
     builder.addCase(deleteMail.fulfilled, (state, action) => {
@@ -27,7 +27,7 @@ const MailBoxSlice = createSlice({
       state.isMailDetailsDeleted = false;
     });
     builder.addCase(deleteMail.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isMailDetailsDeleted = false;
     });
   }

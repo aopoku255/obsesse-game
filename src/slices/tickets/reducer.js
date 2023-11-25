@@ -16,7 +16,7 @@ const TicketsSlice = createSlice({
             state.isTicketSuccess = true;
         });
         builder.addCase(getTicketsList.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
             state.isTicketCreated = false;
             state.isTicketSuccess = false;
         });
@@ -27,7 +27,7 @@ const TicketsSlice = createSlice({
             state.isTicketAddFail = false;
         });
         builder.addCase(addNewTicket.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
             state.isTicketAdd = false;
             state.isTicketAddFail = true;
         });
@@ -41,7 +41,7 @@ const TicketsSlice = createSlice({
             state.isTicketUpdateFail = false;
         });
         builder.addCase(updateTicket.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
             state.isTicketUpdate = false;
             state.isTicketUpdateFail = true;
         });
@@ -53,7 +53,7 @@ const TicketsSlice = createSlice({
             state.isTicketDeleteFail = false;
         });
         builder.addCase(deleteTicket.rejected, (state, action) => {
-            state.error = action.payload.error || null;
+            // state.error = action.payload.error || null;
             state.isTicketDelete = false;
             state.isTicketDeleteFail = true;
         });

@@ -370,7 +370,7 @@ const InvoiceList = () => {
                 </CardHeader>
                 <CardBody className="pt-0">
                   <div>
-                    {isInvoiceSuccess && invoices.length ? (
+                    {isInvoiceSuccess && invoices?.length ? (
                       <TableContainer
                         columns={columns}
                         data={(invoices || [])}

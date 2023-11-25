@@ -168,7 +168,7 @@ const EcommerceOrders = () => {
       setActiveTab(tab);
       let filteredOrders = orders;
       if (type !== "all") {
-        filteredOrders = orders.filter((order) => order.status === type);
+        filteredOrders = orders?.filter((order) => order.status === type);
       }
       setOrderList(filteredOrders);
     }
@@ -640,7 +640,7 @@ const EcommerceOrders = () => {
                       </NavLink>
                     </NavItem>
                   </Nav>
-                  {isOrderSuccess && orderList.length ? (
+                  {isOrderSuccess && orderList?.length ? (
                     <TableContainer
                       columns={columns}
                       data={(orderList || [])}

@@ -17,14 +17,14 @@ const DashboardCryptoSlice = createSlice({
       state.portfolioData = action.payload;
     });
     builder.addCase(getPortfolioChartsData.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(getMarketChartsData.fulfilled, (state, action) => {
       state.marketData = action.payload;
     });
     builder.addCase(getMarketChartsData.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
   }
 });

@@ -22,7 +22,7 @@ const FileManagerSlice = createSlice({
       state.folders.push(action.payload);
     });
     builder.addCase(addNewFolder.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(updateFolder.fulfilled, (state, action) => {
@@ -34,23 +34,23 @@ const FileManagerSlice = createSlice({
     });
 
     builder.addCase(updateFolder.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(deleteFolder.fulfilled, (state, action) => {
       state.folders = state.folders.filter(
-        folder => (folder.id + "") !== (action.payload + "") 
+        folder => (folder.id + "") !== (action.payload + "")
       );
     });
     builder.addCase(deleteFolder.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(getFiles.fulfilled, (state, action) => {
       state.files = action.payload;
     });
     builder.addCase(getFiles.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(addNewFile.fulfilled, (state, action) => {
@@ -58,7 +58,7 @@ const FileManagerSlice = createSlice({
     });
 
     builder.addCase(addNewFile.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(updateFile.fulfilled, (state, action) => {
@@ -70,7 +70,7 @@ const FileManagerSlice = createSlice({
     });
 
     builder.addCase(updateFile.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
 
     builder.addCase(deleteFile.fulfilled, (state, action) => {
@@ -79,7 +79,7 @@ const FileManagerSlice = createSlice({
       );
     });
     builder.addCase(deleteFile.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
   }
 });

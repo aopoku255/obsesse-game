@@ -17,7 +17,7 @@ const InvoiceSlice = createSlice({
       state.isInvoiceSuccess = true;
     });
     builder.addCase(getInvoices.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
       state.isInvoiceCreated = false;
       state.isInvoiceSuccess = false;
     });
@@ -26,7 +26,7 @@ const InvoiceSlice = createSlice({
       state.isInvoiceCreated = true;
     });
     builder.addCase(addNewInvoice.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
     builder.addCase(updateInvoice.fulfilled, (state, action) => {
       state.invoices = state.invoices.map(invoice =>
@@ -36,7 +36,7 @@ const InvoiceSlice = createSlice({
       );
     });
     builder.addCase(updateInvoice.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
     builder.addCase(deleteInvoice.fulfilled, (state, action) => {
       state.invoices = state.invoices.filter(
@@ -44,7 +44,7 @@ const InvoiceSlice = createSlice({
       );
     });
     builder.addCase(deleteInvoice.rejected, (state, action) => {
-      state.error = action.payload.error || null;
+      // state.error = action.payload.error || null;
     });
   }
 });

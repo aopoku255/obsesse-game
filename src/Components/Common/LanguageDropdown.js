@@ -30,7 +30,7 @@ const LanguageDropdown = () => {
     };
     return (
         <React.Fragment>
-            <Dropdown isOpen={isLanguageDropdown} toggle={toggleLanguageDropdown} className="ms-1 topbar-head-dropdown header-item">
+            {/* <Dropdown isOpen={isLanguageDropdown} toggle={toggleLanguageDropdown} className="ms-1 topbar-head-dropdown header-item">
                 <DropdownToggle className="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" tag="button">
                     <img
                         src={get(languages, `${selectedLang}.flag`)}
@@ -59,7 +59,7 @@ const LanguageDropdown = () => {
                         </DropdownItem>
                     ))}
                 </DropdownMenu>
-            </Dropdown>
+            </Dropdown> */}
         </React.Fragment>
     );
 };
