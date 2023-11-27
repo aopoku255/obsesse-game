@@ -27,14 +27,14 @@ const LiveAuction = () => {
         <React.Fragment>
             <div className="page-content">
                 <Container fluid>
-                    <BreadCrumb title="Live Auction" pageTitle="NFT Marketplace" />
+                    <BreadCrumb title="Shop" pageTitle="Obesse Marketplace" />
                     <Row>
                         <Col xxl={9}>
                             <Card>
                                 <CardHeader className="border-0">
                                     <div className="d-lg-flex align-items-center">
                                         <div className="flex-grow-1">
-                                            <h5 className="card-title mb-0">Live Auction</h5>
+                                            <h5 className="card-title mb-0">Store</h5>
                                         </div>
 
                                         <div className="flex-shrink-0 mt-4 mt-lg-0">
@@ -43,13 +43,13 @@ const LiveAuction = () => {
                                                     <button type="button" data-filter="all" onClick={() => setCategory("All")} className={displayCategory === "All" ? "nav-link fw-medium active" : "nav-link fw-medium"}>All Items</button>
                                                 </li>
                                                 <li className="nav-item" role="presentation">
-                                                    <button type="button" data-filter="upto-15" onClick={() => setCategory("upto-15")} className={displayCategory === "upto-15" ? "nav-link fw-medium active" : "nav-link fw-medium"}>Up to 15%</button>
+                                                    <button type="button" data-filter="upto-15" onClick={() => setCategory("upto-15")} className={displayCategory === "upto-15" ? "nav-link fw-medium active" : "nav-link fw-medium"}>console</button>
                                                 </li>
                                                 <li className="nav-item" role="presentation">
-                                                    <button type="button" data-filter="upto-30" onClick={() => setCategory("upto-30")} className={displayCategory === "upto-30" ? "nav-link fw-medium active" : "nav-link fw-medium"}>Up to 30%</button>
+                                                    <button type="button" data-filter="upto-30" onClick={() => setCategory("upto-30")} className={displayCategory === "upto-30" ? "nav-link fw-medium active" : "nav-link fw-medium"}>disk</button>
                                                 </li>
                                                 <li className="nav-item" role="presentation">
-                                                    <button type="button" data-filter="upto-40" onClick={() => setCategory("upto-40")} className={displayCategory === "upto-40" ? "nav-link fw-medium active" : "nav-link fw-medium"}>Up to 40%</button>
+                                                    <button type="button" data-filter="upto-40" onClick={() => setCategory("upto-40")} className={displayCategory === "upto-40" ? "nav-link fw-medium active" : "nav-link fw-medium"}>TV</button>
                                                 </li>
                                             </ul>
                                         </div>
@@ -59,23 +59,24 @@ const LiveAuction = () => {
                             </Card>
                             <Row>
 
-                                {(aution.filter(({ category }) => displayCategory === category || displayCategory === "All")).map((item, key) => (<Col xxl={3} lg={4} md={6} className="product-item upto-15" key={key}>
+                                {(aution?.filter(({ category }) => displayCategory === category || displayCategory === "All")).map((item, key) => (<Col xxl={3} lg={4} md={6} className="product-item upto-15" key={key}>
                                     <Card className="explore-box card-animate">
                                         <div className="position-relative rounded overflow-hidden">
                                             <img src={item.img} alt="" className="card-img-top explore-img" />
                                             <div className="discount-time">
-                                                <Countdown date={item.date} renderer={renderer} />
+                                                {/* <Countdown date={item.date} renderer={renderer} /> */}
+                                                <Link to="#" className="btn btn-soft-success d-block">Add to Cart</Link>
                                             </div>
                                         </div>
                                         <CardBody>
-                                            <p className="fw-medium mb-0 float-end"><i className="mdi mdi-heart text-danger align-middle"></i> {item.likes}k </p>
-                                            <h5 className="text-success"><i className="mdi mdi-ethereum"></i> {item.price} ETH </h5>
+                                            {/* <p className="fw-medium mb-0 float-end"><i className="mdi mdi-heart text-danger align-middle"></i> {item.likes}k </p> */}
                                             <h6 className="fs-16 mb-3"><Link to="/apps-nft-item-details" className="text-reset">{item.title}</Link></h6>
+                                            <h5 className="text-success"><i className="mdi mdi-cash-multiple"></i>GH₵ {item.price}</h5>
                                             <div>
-                                                <span className="text-muted float-end">Available: {item.available}</span>
-                                                <span className="text-muted">Sold: {item.sold}</span>
+                                                {/* <span className="text-muted float-end">Available: {item.available}</span>
+                                                <span className="text-muted">Sold: {item.sold}</span> */}
                                                 <div className="progress progress-sm mt-2">
-                                                    <div className={"progress-bar progress-bar-striped bg-" + item.progressClass} role="progressbar" style={{ width: item.size }} aria-valuenow="67" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    {/* <div className={"progress-bar progress-bar-striped bg-" + item.progressClass} role="progressbar" style={{ width: item.size }} aria-valuenow="67" aria-valuemin="0" aria-valuemax="100"></div> */}
                                                 </div>
                                             </div>
                                         </CardBody>
@@ -90,7 +91,7 @@ const LiveAuction = () => {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col xxl={3}>
+                        {/* <Col xxl={3}>
                             <Card>
                                 <CardHeader className="d-flex align-items-center">
                                     <h6 className="card-title mb-0 flex-grow-1">Top Drop</h6>
@@ -147,7 +148,7 @@ const LiveAuction = () => {
                                     </div>
                                 </CardBody>
                             </Card>
-                        </Col>
+                        </Col> */}
                     </Row>
                 </Container>
             </div>

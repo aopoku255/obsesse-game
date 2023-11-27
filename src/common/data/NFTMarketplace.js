@@ -215,11 +215,11 @@ const expolreNow = [
 const aution = [
     {
         id: 1,
-        img: Img1,
+        img: "https://m.media-amazon.com/images/I/51eOztNdCkL._SL1500_.jpg",
         date: "2024/3/19",
         likes: "19.29",
         price: "97.8",
-        title: "Abstract Face Painting",
+        title: "PlayStation 5 Console (PS5)",
         available: "436",
         sold: "4187",
         progressClass: "warning",
@@ -228,11 +228,11 @@ const aution = [
     },
     {
         id: 2,
-        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+        img: "https://m.media-amazon.com/images/I/71AkKIudTnL._SX522_.jpg",
         date: "2024/4/16",
         likes: "8.42",
         price: "245.23",
-        title: "Patterns Arts & Culture",
+        title: "Xbox Series S",
         available: "8974",
         sold: "13",
         progressClass: "primary",
@@ -241,11 +241,11 @@ const aution = [
     },
     {
         id: 3,
-        img: Img3,
+        img: "https://m.media-amazon.com/images/I/61oFqsoj9nL._SX522_.jpg",
         date: "2024/12/1",
         likes: "19.29",
         price: "67.36",
-        title: "Creative Filtered Portrait",
+        title: "Xbox 360 4GB Slim Console - (Renewed)",
         available: "3620",
         sold: "345",
         progressClass: "warning",
@@ -254,7 +254,7 @@ const aution = [
     },
     {
         id: 4,
-        img: Img4,
+        img: "https://m.media-amazon.com/images/I/71AkKIudTnL._SX522_.jpg",
         date: "2024/11/26",
         likes: "34.12",
         price: "34.81",
@@ -267,7 +267,7 @@ const aution = [
     },
     {
         id: 5,
-        img: "https://img.themesbrand.com/velzon/images/img-5.gif",
+        img: "https://m.media-amazon.com/images/I/51eOztNdCkL._SL1500_.jpg",
         date: "2024/5/27",
         likes: "47.12",
         price: "245.23",
@@ -280,7 +280,7 @@ const aution = [
     },
     {
         id: 6,
-        img: Img2,
+        img: "https://m.media-amazon.com/images/I/71x47I34rtL._SY679_.jpg",
         date: "2024/5/20",
         likes: "23.63",
         price: "394.7",
@@ -293,7 +293,7 @@ const aution = [
     },
     {
         id: 7,
-        img: Img6,
+        img: "https://m.media-amazon.com/images/I/61oFqsoj9nL._SX522_.jpg",
         date: "2024/6/10",
         likes: "36.42",
         price: "745.14",
